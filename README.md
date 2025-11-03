@@ -1,6 +1,5 @@
-##
 
-````md
+
 # 🧥 Invisibility Cloak Controller
 
 ### Real-Time Vision System using **Next.js + Flask + OpenCV**
@@ -40,7 +39,7 @@ It then replaces those pixels with the background, creating an illusion of invis
 
 ### 1️⃣ Clone the Repository
 
-```bash
+
 git clone https://github.com/Aryan22N/Invisibility-Cloak-AI.git
 cd Invisibility-Cloak-AI
 ```
