@@ -119,7 +119,7 @@ http://localhost:3000
 ## 🌟 Future Enhancements
 
 - Add support for **multiple cloak colors**
-- Implement **AI-based segmentation** for better accuracy
+- Implement **AI-based Segmentation** for better accuracy
 - Deploy full stack on **Render / Vercel**
 - Add **dark/light theme** toggle in UI
 
