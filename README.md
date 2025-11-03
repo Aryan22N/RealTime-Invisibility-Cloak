@@ -1,36 +1,135 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## \_
 
-## Getting Started
+````md
+# 🧥 Invisibility Cloak Controller
 
-First, run the development server:
+### Real-Time Vision System using **Next.js + Flask + OpenCV**
+
+This project implements a **real-time invisibility cloak** inspired by the Harry Potter concept — powered by **Computer Vision (OpenCV)** and a **Next.js frontend** for smooth control and monitoring.  
+Users can **start or stop** the cloak process, view **live output**, and manage **color selection** for the cloak.
+
+---
+
+## 🚀 Project Overview
+
+The system works by identifying a specific cloak color (e.g., black or blue) from a live webcam feed using **color masking** and **background subtraction**.  
+It then replaces those pixels with the background, creating an illusion of invisibility.
+
+**Core features include:**
+
+- 🎥 Dual camera window — one for **original** and one for **processed cloak output**
+- ⚡ Real-time video streaming with Flask and OpenCV
+- 🌈 Adjustable cloak color
+- 🧠 Smooth frontend controls using React Hooks
+- 🔗 API communication between Next.js & Flask
+
+---
+
+## 🧩 Tech Stack
+
+| Layer               | Technologies Used                   |
+| :------------------ | :---------------------------------- |
+| **Frontend**        | Next.js (React), TailwindCSS, Axios |
+| **Backend**         | Flask (Python), Flask-CORS          |
+| **Computer Vision** | OpenCV                              |
+| **Language**        | JavaScript + Python                 |
+
+---
+
+## 🛠️ Installation & Setup
+
+### 1️⃣ Clone the Repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Aryan22N/Invisibility-Cloak-AI.git
+cd Invisibility-Cloak-AI
+```
+````
+
+---
+
+### 2️⃣ Backend Setup (Flask)
+
+```bash
+cd backend
+pip install flask flask-cors opencv-python
+python app.py
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Your Flask server will run at:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+http://127.0.0.1:5001
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+### 3️⃣ Frontend Setup (Next.js)
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Your frontend will be available at:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+http://localhost:3000
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ⚙️ API Endpoints
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Endpoint | Method | Description                          |
+| :------- | :----- | :----------------------------------- |
+| `/start` | POST   | Start the invisibility cloak process |
+| `/stop`  | POST   | Stop the invisibility cloak process  |
+
+---
+
+## 🧠 Working Principle
+
+1. Capture the background frame before starting.
+2. Detect cloak color (e.g., black or blue) using HSV color masking.
+3. Replace the detected cloak area with the stored background.
+4. Stream both the **original feed** and **processed output** live.
+
+---
+
+## 🖥️ UI Preview
+
+| Feature                | Screenshot                                             |
+| :--------------------- | :----------------------------------------------------- |
+| **Main Control Panel** | 🧥 Start/Stop buttons, color selector, and live status |
+| **Dual Feed Output**   | Original + Cloaked video windows                       |
+
+---
+
+## 👨‍💻 Team Members
+
+| Name                |
+| :------------------ |
+| **Aryan Nandanwar** |
+| **Pranav Shende**   |
+| **Krishna Jajoo**   |
+
+---
+
+## 🌟 Future Enhancements
+
+- Add support for **multiple cloak colors**
+- Implement **AI-based segmentation** for better accuracy
+- Deploy full stack on **Render / Vercel**
+- Add **dark/light theme** toggle in UI
+
+---
+
+## ❤️ Acknowledgments
+
+- OpenCV community for Computer Vision libraries
+- Next.js & Flask documentation for framework support
+- Inspired by **Harry Potter’s Invisibility Cloak** concept
+
+---
