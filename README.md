@@ -1,4 +1,4 @@
-## \_
+##
 
 ````md
 # 🧥 Invisibility Cloak Controller
